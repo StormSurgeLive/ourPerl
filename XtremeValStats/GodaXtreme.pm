@@ -39,7 +39,8 @@ package GodaXtreme;
 use strict;
 use warnings;
 
-use lib 'c:\ourPerl';   # only needed foro NOAA_gauge_POT
+use FindBin qw/$Bin/;
+use lib "$Bin/..";
 use Date::Pcalc;        # only needed foro NOAA_gauge_POT
 use Math::Trig;
 
@@ -960,7 +961,7 @@ sub NOAA_gauge_POT{
     $minEventDuration=$minEventDuration*$recsPerHour;
     my $coopsFile= 0;
     $coopsFile = $args{-COOPSFILE} if defined ($args{-COOPSFILE});
-    my $pathToDataGetter='c:/ourPerl/DataGetters';
+    my $pathToDataGetter="$Bin/../DataGetters";
     $pathToDataGetter=$args{-PATHTODATAGETTER} if defined $args{-PATHTODATAGETTER};
 
   

@@ -12,7 +12,8 @@ use Date::Pcalc;
 
 
 # my modules
-use lib 'c:\ourPerl';
+use FindBin qw/$Bin/;
+use lib "$Bin/..";
 use StwaveUtils::StwaveObj;
 use Mapping::UTMconvert;
 my $pi=atan2(0,-1);
@@ -54,7 +55,7 @@ my @REMOTEDIRS=('J:\NACCS_USACE_Data\Simulations\ET_HIS_Base',
  my $dlon=200 * 1/60/1852 / cos($meanLat*3.14159/180);         # determines size of pixels
  my $dlat=200 * 1/60/1852;                              # (200 * 1/60/1852) is about 200 meters 
 
- my $cmapFile='c:\myPerl\jet.txt';  # file containing the colormap. See "sub loadColormap" for file format
+ my $cmapFile="$Bin/../jet.txt";  # file containing the colormap. See "sub loadColormap" for file format
 
  # vectors
  my $vecSpacing=40;  # pixels 

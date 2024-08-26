@@ -6,7 +6,8 @@
 use strict;
 use warnings;
 
-use lib 'c:\ourPerl'; # this is the directory where you store the AdcircUtils perl packages
+use FindBin qw/$Bin/;
+use lib "$Bin/..";
 use AdcircUtils::AdcGrid;
 use AdcircUtils::ElementQuadTree;
 

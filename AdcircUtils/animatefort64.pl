@@ -10,7 +10,8 @@
 use strict;
 use warnings;
 
-use lib 'c:\ourPerl'; # this is the directory where you store the AdcircUtils perl packages
+use FindBin qw/$Bin/;
+use lib "$Bin/..";
 use AdcircUtils::AdcGrid;
 use AdcircUtils::ElementQuadTree;
 use KML::MakePNG;
@@ -38,7 +39,7 @@ my $cbarTitle='Depth Averaged Current (knots)'; # colorbar title
 my $framesDir='Frames';  # name of the dir within the final kmz file that will hold individual frames' kml and png files
 
 # some settings to control colors on plot
-my $cmapFile='c:\ourPerl\jet.txt';  # file containing the colormap. See "sub loadColormap" for file format
+my $cmapFile="$Bin/../jet.txt";  # file containing the colormap. See "sub loadColormap" for file format
 my $numColors=18;  # number of distinct colors 
 my $alpha=30;  # controls transparency (0-opaque, 255-transparent)
 my $cll=0; # lower limit for colorbar

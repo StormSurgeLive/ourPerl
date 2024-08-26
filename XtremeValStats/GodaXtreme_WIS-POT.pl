@@ -31,7 +31,8 @@
 
 use strict;
 use warnings;
-use lib 'c:\ourPerl';
+use FindBin qw/$Bin/;
+use lib "$Bin/..";
 use XtremeValStats::GodaXtreme;
 
 

@@ -2,7 +2,8 @@
 use strict;
 use warnings;
 
-use lib 'c:\ourPerl';
+use FindBin qw/$Bin/;
+use lib "$Bin/..";
 use SwanUtils::SwanObj;
 
 use Lidar::PointTree;
@@ -25,7 +26,7 @@ foreach my $grd (1..3){
 my $tileSize=0.00001*1000;   # size of "square" quad-tree leaf nodes in degrees
 $tileSize=0.00001*10000 if ($grd==1);
 $tileSize=0.00001*5000 if ($grd==2);
-my $colorFile='c:/ourPerl/jet.txt';
+my $colorFile="$Bin/../jet.txt";
 my @CLIM=(0,6);
 my $numColors=12;
 my $addAdjust=0;

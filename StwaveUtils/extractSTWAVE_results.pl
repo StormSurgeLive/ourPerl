@@ -2,7 +2,8 @@
 use strict;
 use warnings;
 
-use lib 'c:\ourPerl';
+use FindBin qw/$Bin/;
+use lib "$Bin/..";
 use StwaveUtils::StwaveObj;
 use Mapping::UTMconvert;
 use Cwd qw(getcwd);

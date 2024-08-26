@@ -33,8 +33,10 @@ use warnings;
 use lib 'C:/ourPerl';
 use Lidar::PointTree;
 
+use FindBin qw/$Bin/;
+
 my $treeFile='tree.tree2';
-my $colorFile='c:/ourPerl/jet.txt';
+my $colorFile="$Bin/../jet.txt";
 
 my @CLIM=(0,30);
 my $numColors=15;

@@ -1,10 +1,9 @@
 #!/usr/bin/env perl
-
-
-
 use strict;
 use warnings;
-use lib 'c:\ourPerl';    # change this to point to the path to your ourPerl directory
+
+use FindBin qw/$Bin/;
+use lib "$Bin/..";
 use AdcircUtils::AdcGrid;
 use AdcircUtils::ElementQuadTree;
 use Geometry::PolyTools;
@@ -46,7 +45,7 @@ unless (-e $treefile){
                     #-ZDATA=>\@ZDATA,  
 #                    -CLIM1=>-10,
 #                    -CLIM2=>10,
-#                    -PALETTE=>'c:\myPerl\jet.txt',
+#                    -PALETTE=>"$Bin/../jet.txt",
 #                    -NUMCOLORS=>20,     # number of colors to display in png files for ovs
 #                    -MULT_ADJUST=>-1.0
 #                   );
@@ -107,7 +106,7 @@ while (<IN>){
                     #-ZDATA=>\@ZDATA,  
                     -CLIM1=>-2,
                     -CLIM2=>2,
-                    -PALETTE=>'c:\ourPerl\jet.txt',
+                    -PALETTE=>"$Bin/../jet.txt",
                     -NUMCOLORS=>9,     # number of colors to display in png files for overlays
                     -MULT_ADJUST=>-1.0
                    );

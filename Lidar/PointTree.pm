@@ -855,7 +855,7 @@ sub _writeKMLOverlay{
 
 #######################################################
 # sub writeKMLPoints(                                 #  public method
-#                    -COLORFILE=>'c:/ourPerl/jet.txt',
+#                    -COLORFILE=>"$Bin/../jet.txt",
 #                    -CLIM1=>$CLIM[0],
 #                    -CLIM2=>$CLIM[1],
 #                    -NUMCOLORS=>$numColors,
@@ -883,7 +883,7 @@ sub writeKMLPoints{
    $obj->{NUMCOLORS}=16;
    $obj->{ZADDADJUST}=0;
    $obj->{ZMULTADJUST}=1; 
-   $obj->{COLORFILE}='c:/ourPerl/jet.txt';	
+   $obj->{COLORFILE}="$Bin/../jet.txt";	
    $obj->{CLIM1}=-10;
    $obj->{CLIM2}=10;
    $obj->{CBARTITLE}='colorbar title';

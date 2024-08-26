@@ -1,7 +1,8 @@
 #!/usr/bin/env perl
 use strict;
 use warnings;
-use lib 'c:\ourPerl';
+use FindBin qw/$Bin/;
+use lib "$Bin/..";
 use AdcircUtils::AdcGrid;
 use IO::Zlib;
 use IO::Uncompress::Bunzip2 qw(bunzip2 $Bunzip2Error);

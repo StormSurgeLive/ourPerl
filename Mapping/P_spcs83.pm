@@ -5,7 +5,8 @@
 #
 # example :
 #
-#  use lib 'c:\myPerl';
+#  use FindBin qw/$Bin/;
+#  use lib "$Bin/..";
 #  use Mapping::P_spcs83;
 #
 #  # northing and easting in meters

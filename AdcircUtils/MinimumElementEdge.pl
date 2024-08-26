@@ -2,7 +2,8 @@
 
 use strict;
 use warnings;
-use lib 'c:\ourPerl';
+use FindBin qw/$Bin/;
+use lib "$Bin/..";
 use AdcircUtils::AdcGrid;
 use Geometry::PolyTools;
 use Mapping::UTMconvert;

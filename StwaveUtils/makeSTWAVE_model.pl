@@ -18,9 +18,8 @@ use warnings;
 # width=50000;dx=100
 #
 
-
-
-use lib 'c:\ourPerl';
+use FindBin qw/$Bin/;
+use lib "$Bin/..";
 use StwaveUtils::StwaveObj;
 use Mapping::UTMconvert;
 

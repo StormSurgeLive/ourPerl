@@ -2,7 +2,8 @@
 use warnings;
 use strict;
 
-use lib 'c:\ourPerl';
+use FindBin qw/$Bin/;
+use lib "$Bin/..";
 use StwaveUtils::StwaveObj;
 use Mapping::UTMconvert;
 use Lidar::PointTree;
@@ -21,7 +22,7 @@ my $kmlPolygon='search.kml';  # kml polygon to select area leave undef if you wa
 
 # config for the points kmz
 my $tileSize=0.00001*100;   # size of "square" quad-tree leaf nodes in degrees
-my $colorFile='c:/ourPerl/jet.txt';
+my $colorFile="$Bin/../jet.txt";
 my @CLIM=(8,13);
 my $numColors=10;
 my $addAdjust=0;
