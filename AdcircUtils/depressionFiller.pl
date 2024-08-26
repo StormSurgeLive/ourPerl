@@ -18,7 +18,8 @@
 
 use strict;
 use warnings;
-use lib 'c:\ourPerl';          
+use FindBin qw/$Bin/;
+use lib "$Bin/../";          
 use AdcircUtils::AdcGrid;
 use Geometry::PolyTools;
 
@@ -73,7 +74,7 @@ foreach my $n (1..$np){
    my $maxNeighborDp=-999999999;
    my $minNeighborDp=99999999;
    foreach my $nei (@{$NEITAB[$n]}){
-print "node $n, nei $nei, DP $DP[$nei]\n";
+      print "node $n, nei $nei, DP $DP[$nei]\n";
       $maxNeighborDp=$DP[$nei] if $DP[$nei] > $maxNeighborDp;
       $minNeighborDp=$DP[$nei] if $DP[$nei] < $minNeighborDp;
    }
